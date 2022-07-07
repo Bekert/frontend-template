@@ -1,1 +1,1 @@
-# Frontend Template
+# Next JS Template
