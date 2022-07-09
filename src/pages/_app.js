@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
+import { SSRProvider } from 'react-bootstrap'
+
 import '../styles/global.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<Layout>
-			<Component {...pageProps} />
-		</Layout>
+		<SSRProvider>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</SSRProvider>
 	)
 }
 
