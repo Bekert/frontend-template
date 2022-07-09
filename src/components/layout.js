@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types'
+import { SSRProvider } from 'react-bootstrap'
 
 function Layout({ children }) {
-	return <main>{children}</main>
+	return (
+		<SSRProvider>
+			<main>{children}</main>
+		</SSRProvider>
+	)
 }
 
 Layout.propTypes = {
