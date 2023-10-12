@@ -13,7 +13,8 @@
 		"prepare": "husky install",
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"op": "next lint"
 	},
 	"config": {
 		"commitizen": {
@@ -34,13 +35,7 @@
 			"./configs/linting/.eslintrc.json"
 		]
 	},
-	"babel": {
-		"extends": "./configs/linting/.babelrc.json"
-	},
 	"devDependencies": {
-		"@babel/core": "^7.23.2",
-		"@babel/eslint-parser": "^7.22.15",
-		"@babel/plugin-syntax-jsx": "^7.22.5",
 		"@commitlint/cli": "^17.7.2",
 		"@commitlint/config-conventional": "^17.7.0",
 		"commitizen": "^4.3.0",
