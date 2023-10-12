@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"commit": "git-cz",
+		"commit": "cz",
 		"prettier:check": "prettier --check .",
 		"prettier:fix": "prettier --write .",
 		"eslint:check": "eslint .",
@@ -17,11 +17,13 @@
 	},
 	"config": {
 		"commitizen": {
-			"path": "cz-customizable"
-		},
-		"cz-customizable": {
-			"config": "./configs/commiting/commitizen.cjs"
+			"path": "./node_modules/cz-conventional-changelog"
 		}
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
 	},
 	"lint-staged": {
 		"*.{html,md,json,yml,yaml,js,css,scss}": "npm run lint:fix"
@@ -40,8 +42,9 @@
 		"@babel/eslint-parser": "^7.22.15",
 		"@babel/plugin-syntax-jsx": "^7.22.5",
 		"@commitlint/cli": "^17.7.2",
+		"@commitlint/config-conventional": "^17.7.0",
 		"commitizen": "^4.3.0",
-		"cz-customizable": "^6.9.2",
+		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.51.0",
 		"eslint-plugin-react": "^7.33.2",
 		"husky": "^8.0.3",
