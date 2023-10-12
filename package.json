@@ -13,8 +13,7 @@
 		"prepare": "husky install",
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
-		"op": "next lint"
+		"start": "next start"
 	},
 	"config": {
 		"commitizen": {
